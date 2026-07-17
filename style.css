@@ -1089,3 +1089,12 @@ textarea{
     0 2px 5px rgba(0,0,0,.08);
 
 }
+/* تثبيت خط أسماء العريس والعروسة في صفحة الآباء */
+
+.parents-box + .couple-names,
+.couple-names{
+
+    font-family:"Aref Ruqaa" !important;
+    color:#b88a2c;
+
+}
