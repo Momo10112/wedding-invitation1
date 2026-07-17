@@ -33,32 +33,22 @@ const cards = document.querySelectorAll(".card");
 // فتح الدعوة
 //====================================
 
-openBtn.addEventListener("click",()=>{
+openBtn.addEventListener("click", () => {
 
+    welcome.style.opacity = "0";
 
-    welcome.style.opacity="0";
+    setTimeout(() => {
 
+        welcome.style.display = "none";
+        invitation.style.display = "block";
 
-    setTimeout(()=>{
-
-
-        welcome.style.display="none";
-
-        invitation.style.display="block";
-
-
-        music.play().catch(()=>{});
-
+        music.play().catch(() => {});
 
         showCards();
 
-        startFlowers();
-
         startAutoScroll();
 
-
-    },800);
-
+    }, 800);
 
 });
 
@@ -67,85 +57,54 @@ openBtn.addEventListener("click",()=>{
 // ظهور الكروت
 //====================================
 
-function showCards(){
+function showCards() {
 
+    const observer = new IntersectionObserver((entries) => {
 
-const observer = new IntersectionObserver(entries=>{
+        entries.forEach((entry) => {
 
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            }
 
-entries.forEach(entry=>{
+        });
 
+    }, { threshold: 0.25 });
 
-if(entry.isIntersecting){
-
-entry.target.classList.add("show");
-
-}
-
-
-});
-
-
-},{threshold:.25});
-
-
-
-cards.forEach(card=>observer.observe(card));
-
+    cards.forEach((card) => observer.observe(card));
 
 }
 
-
-//====================================
-// سقوط الثلج ❄️
-//====================================
 
 //====================================
 // Auto Scroll
 //====================================
 
-
 let autoScroll;
 
+function startAutoScroll() {
 
+    clearInterval(autoScroll);
 
-function startAutoScroll(){
+    autoScroll = setInterval(() => {
 
+        const maxScroll =
+            document.documentElement.scrollHeight - window.innerHeight;
 
-autoScroll=setInterval(()=>{
+        if (window.scrollY >= maxScroll) {
+            clearInterval(autoScroll);
+            return;
+        }
 
+        window.scrollBy(0, 2);
 
-if(window.innerHeight+window.scrollY>=document.body.offsetHeight-5){
-
-
-clearInterval(autoScroll);
-
-
-return;
-
-
-}
-
-
-window.scrollBy(0,2);
-
-
-
-},20);
-
-
+    }, 20);
 
 }
 
-
-
-window.addEventListener("wheel",()=>clearInterval(autoScroll));
-
-window.addEventListener("touchstart",()=>clearInterval(autoScroll));
-
-window.addEventListener("keydown",()=>clearInterval(autoScroll));
-
-
+window.addEventListener("wheel", () => clearInterval(autoScroll));
+window.addEventListener("touchstart", () => clearInterval(autoScroll));
+window.addEventListener("keydown", () => clearInterval(autoScroll));
 
 
 //====================================
