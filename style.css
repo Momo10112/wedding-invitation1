@@ -1149,24 +1149,37 @@ textarea{
 
     display:block;
     font-family:"Aref Ruqaa" !important;
-    font-size:42px;
+
+}
+
+
+.children-names .and{
+
+    font-size:42px !important;
 
 }
 
 
 @media(max-width:480px){
 
-.children-names{
+    .children-names{
 
-    font-size:62px !important;
+        font-size:62px !important;
 
-}
+    }
 
 
-.children-names span{
+    .children-names span{
 
-    font-size:42px !important;
+        font-size:62px !important;
 
-}
+    }
+
+
+    .children-names .and{
+
+        font-size:38px !important;
+
+    }
 
 }
