@@ -96,17 +96,15 @@ function startAutoScroll() {
             return;
         }
 
-        window.scrollBy(0, 2);
+        window.scrollTo(0, window.scrollY + 2);
 
-    }, 20);
+    }, 16);
 
 }
 
-window.addEventListener("wheel", () => clearInterval(autoScroll));
 window.addEventListener("touchstart", () => clearInterval(autoScroll));
+window.addEventListener("wheel", () => clearInterval(autoScroll));
 window.addEventListener("keydown", () => clearInterval(autoScroll));
-
-
 //====================================
 // Countdown
 //====================================
@@ -353,38 +351,3 @@ window.scrollTo(0,0);
 
 
 
-//====================================
-// حركة الكروت
-//====================================
-
-
-const observer=new IntersectionObserver((entries)=>{
-
-
-entries.forEach(entry=>{
-
-
-if(entry.isIntersecting){
-
-
-entry.target.classList.add("show");
-
-
-}
-
-
-
-});
-
-
-},{threshold:.25});
-
-
-
-document.querySelectorAll(".card").forEach(card=>{
-
-
-observer.observe(card);
-
-
-});
