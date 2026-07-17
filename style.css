@@ -33,82 +33,7 @@ body{
 }
 
 
-/*==================================
-            Snow Effect
-==================================*/
 
-#flowers{
-
-    position:fixed;
-
-    inset:0;
-
-    pointer-events:none;
-
-    overflow:hidden;
-
-    z-index:999;
-
-}
-
-
-.flower{
-
-    position:absolute;
-
-    top:-60px;
-
-    color:white;
-
-    opacity:.9;
-
-    font-size:22px;
-
-    animation:snowFall linear forwards;
-
-    text-shadow:
-    0 0 8px rgba(255,255,255,.9);
-
-}
-
-
-@keyframes snowFall{
-
-
-0%{
-
-    transform:
-    translateY(-60px)
-    translateX(0)
-    rotate(0deg);
-
-    opacity:1;
-
-}
-
-
-50%{
-
-    transform:
-    translateY(50vh)
-    translateX(40px)
-    rotate(180deg);
-
-}
-
-
-100%{
-
-    transform:
-    translateY(110vh)
-    translateX(-40px)
-    rotate(360deg);
-
-    opacity:0;
-
-}
-
-}
 
 
 /*==================================
@@ -374,16 +299,15 @@ main{
 
 
 .couple-names{
-
-    font-family:"Aref Ruqaa";
-
-    font-size:82px;
-
+    font-family:"Aref Ruqaa" !important;
+    font-size:75px;
     color:#b88a2c;
-
     line-height:1.2;
 
+    margin-top: -30px;   /* يرفع الأسماء لفوق */
+    margin-bottom: 10px;
 }
+
 
 
 .couple-names span{
