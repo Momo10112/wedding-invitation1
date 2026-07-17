@@ -1,0 +1,1131 @@
+/*==================================
+            Reset
+==================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+body{
+
+    direction:rtl;
+
+    overflow-x:hidden;
+
+    font-family:'Cairo',sans-serif;
+
+    background:#f8f4ed;
+
+    color:#5d4630;
+
+    line-height:1.8;
+
+}
+
+
+/*==================================
+            Snow Effect
+==================================*/
+
+#flowers{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+    z-index:999;
+
+}
+
+
+.flower{
+
+    position:absolute;
+
+    top:-60px;
+
+    color:white;
+
+    opacity:.9;
+
+    font-size:22px;
+
+    animation:snowFall linear forwards;
+
+    text-shadow:
+    0 0 8px rgba(255,255,255,.9);
+
+}
+
+
+@keyframes snowFall{
+
+
+0%{
+
+    transform:
+    translateY(-60px)
+    translateX(0)
+    rotate(0deg);
+
+    opacity:1;
+
+}
+
+
+50%{
+
+    transform:
+    translateY(50vh)
+    translateX(40px)
+    rotate(180deg);
+
+}
+
+
+100%{
+
+    transform:
+    translateY(110vh)
+    translateX(-40px)
+    rotate(360deg);
+
+    opacity:0;
+
+}
+
+}
+
+
+/*==================================
+        Welcome Screen
+==================================*/
+
+
+#welcome{
+
+    width:100%;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:20px;
+
+}
+
+
+.invite-card{
+
+    width:100%;
+
+    max-width:430px;
+
+    min-height:700px;
+
+    background:url("images/background.jpg");
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    background-size:100% 100%;
+
+    border-radius:24px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:45px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.18);
+
+}
+
+
+.card-content{
+
+    width:100%;
+
+}
+
+
+.welcome-text{
+
+    font-family:"Amiri";
+
+    font-size:34px;
+
+    color:#a6792d;
+
+    margin-bottom:20px;
+
+}
+
+
+.invite-card h1{
+
+    font-family:"Amiri";
+
+    font-size:40px;
+
+    margin-bottom:35px;
+
+}
+
+
+.main-names{
+
+    font-family:"Aref Ruqaa";
+
+    font-size:75px;
+
+    color:#b88a2c;
+
+    line-height:1.2;
+
+}
+
+
+.main-names span{
+
+    display:block;
+
+}
+
+
+.main-names .and{
+
+    font-size:42px;
+
+}
+
+
+#openBtn{
+
+    margin-top:45px;
+
+    padding:16px 48px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#b88a2c;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    font-size:19px;
+
+    transition:.3s;
+
+}
+
+
+#openBtn:hover{
+
+    transform:scale(1.05);
+
+}
+/*==================================
+            Sections
+==================================*/
+
+
+main{
+
+    display:none;
+
+}
+
+
+.section{
+
+    padding:0;
+
+    margin-top:-18px;
+
+}
+
+
+.section:first-child{
+
+    margin-top:0;
+
+}
+
+
+.card{
+
+    width:100%;
+
+    max-width:430px;
+
+    min-height:700px;
+
+    margin:auto;
+
+    background:url("images/background.jpg");
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    background-size:100% 100%;
+
+    border-radius:24px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:45px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.15);
+
+}
+
+
+.card-content{
+
+    width:100%;
+
+}
+
+
+.section-title{
+
+    font-family:"Amiri";
+
+    font-size:36px;
+
+    color:#a6792d;
+
+    margin-bottom:25px;
+
+}
+
+
+.basmala{
+
+    font-family:"Amiri";
+
+    font-size:34px;
+
+    color:#a6792d;
+
+    margin-bottom:35px;
+
+}
+
+
+/*==================================
+        Rings & Couple
+==================================*/
+
+
+.rings{
+
+    width:180px;
+
+    margin:auto;
+
+    margin-bottom:25px;
+
+    opacity:.22;
+
+}
+
+
+.rings img{
+
+    width:100%;
+
+}
+
+
+.couple-names{
+
+    font-family:"Aref Ruqaa";
+
+    font-size:82px;
+
+    color:#b88a2c;
+
+    line-height:1.2;
+
+}
+
+
+.couple-names span{
+
+    display:block;
+
+    font-size:42px;
+
+    margin:8px 0;
+
+}
+
+
+/*==================================
+            Parents
+==================================*/
+
+
+.parents-box{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    gap:25px;
+
+    margin:35px 0;
+
+}
+
+
+.parent{
+
+    flex:1;
+
+}
+
+
+.parent h3{
+
+    font-family:"Amiri";
+
+    font-size:24px;
+
+    color:#9a7430;
+
+    margin-bottom:8px;
+
+}
+
+
+.parent h4{
+
+    font-size:22px;
+
+    color:#5d4630;
+
+    margin-bottom:10px;
+
+    font-weight:700;
+
+}
+
+
+.parent span{
+
+    font-size:15px;
+
+    color:#8c7a67;
+
+}
+
+
+.invite-message{
+
+    font-family:"Amiri";
+
+    font-size:27px;
+
+    color:#6a5137;
+
+    line-height:2;
+
+    margin:35px 0;
+
+}
+
+
+.children-names{
+
+    font-family:"Aref Ruqaa";
+
+    font-size:58px;
+
+    color:#b88a2c;
+
+    line-height:1.3;
+
+}
+
+
+.children-names span{
+
+    display:block;
+
+    font-size:34px;
+
+    margin:5px 0;
+
+}
+
+
+/*==================================
+        Card Animation
+==================================*/
+
+
+.card{
+
+    transition:.5s;
+
+}
+
+
+.card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.18);
+
+}
+
+
+/*==================================
+        Decorative Line
+==================================*/
+
+
+.section-title::after{
+
+    content:"";
+
+    display:block;
+
+    width:80px;
+
+    height:2px;
+
+    background:#c8a24a;
+
+    margin:12px auto 0;
+
+    border-radius:5px;
+
+}
+/*==================================
+        موعد الحفل
+==================================*/
+
+.day-name{
+
+    font-family:"Amiri";
+
+    font-size:34px;
+
+    color:#9b7425;
+
+    margin-bottom:10px;
+
+}
+
+
+.event-date{
+
+    font-size:40px;
+
+    font-weight:bold;
+
+    color:#5d4630;
+
+    margin-bottom:12px;
+
+}
+
+
+.event-time{
+
+    font-size:22px;
+
+    color:#8c6a45;
+
+    margin-bottom:35px;
+
+}
+
+
+/*==================================
+        Calendar
+==================================*/
+
+
+.calendar{
+
+    width:100%;
+
+    max-width:360px;
+
+    margin:25px auto;
+
+    padding:18px;
+
+    background:#e8d9c3;
+
+    border:2px solid #c9a86a;
+
+    border-radius:25px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+
+}
+
+
+.calendar-header{
+
+    text-align:center;
+
+    font-family:"Amiri";
+
+    font-size:30px;
+
+    color:#8b5e34;
+
+    margin-bottom:18px;
+
+    padding-bottom:12px;
+
+    border-bottom:1px solid rgba(139,94,52,.2);
+
+}
+
+
+.week{
+
+    display:grid;
+
+    grid-template-columns:repeat(7,1fr);
+
+    margin-bottom:8px;
+
+}
+
+
+.week span{
+
+    text-align:center;
+
+    font-weight:bold;
+
+    color:#8b5e34;
+
+    padding:10px 0;
+
+}
+
+
+.days{
+
+    display:grid;
+
+    grid-template-columns:repeat(7,1fr);
+
+}
+
+
+.days span{
+
+    width:46px;
+
+    height:46px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin:auto;
+
+    color:#5d4630;
+
+    font-size:16px;
+
+    border-radius:50%;
+
+}
+
+
+/* يوم 7 */
+
+.heart-day{
+
+    position:relative;
+
+    width:48px !important;
+
+    height:48px !important;
+
+    display:flex !important;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+.heart-day::before{
+
+    content:"❤";
+
+    position:absolute;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    font-size:46px;
+
+    color:#b88a2c;
+
+}
+
+
+.heart-day .number{
+
+    position:relative;
+
+    z-index:2;
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+}
+
+
+/*==================================
+        Countdown
+==================================*/
+
+
+.counter{
+
+    width:100%;
+
+    margin-top:30px;
+
+    display:flex;
+
+    flex-direction:row;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:nowrap;
+
+    gap:12px;
+
+}
+
+
+.counter div{
+
+    width:75px;
+
+    height:75px;
+
+    background:rgba(255,255,255,.65);
+
+    border-radius:18px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+
+.counter span{
+
+    font-size:25px;
+
+    font-weight:bold;
+
+    color:#b88a2c;
+
+}
+
+
+.counter small{
+
+    font-size:13px;
+
+    color:#666;
+
+}
+/*==================================
+        مكان الحفل
+==================================*/
+
+.hall-name{
+
+    font-family:"Amiri";
+
+    font-size:34px;
+
+    color:#a6792d;
+
+    margin-bottom:15px;
+
+}
+
+
+.hall-address{
+
+    font-size:20px;
+
+    color:#6d533d;
+
+    line-height:2;
+
+    margin-bottom:25px;
+
+}
+
+
+.map-box{
+
+    width:100%;
+
+    height:260px;
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+    border:3px solid rgba(184,138,44,.35);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+
+    margin-bottom:25px;
+
+}
+
+
+.map-box iframe{
+
+    width:100%;
+
+    height:100%;
+
+    border:0;
+
+}
+
+
+.map-button{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:15px 40px;
+
+    background:#b88a2c;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    border-radius:40px;
+
+    transition:.3s;
+
+    font-size:18px;
+
+}
+
+
+.map-button:hover{
+
+    transform:translateY(-3px);
+
+}
+
+
+/*==================================
+        رسائل الأحباب
+==================================*/
+
+
+.end-message{
+
+    font-family:"Amiri";
+
+    font-size:24px;
+
+    line-height:2;
+
+    color:#6d533d;
+
+    margin-bottom:30px;
+
+}
+
+
+input,
+textarea{
+
+    width:100%;
+
+    padding:15px;
+
+    margin-bottom:18px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,.75);
+
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+    font-family:"Cairo";
+
+    font-size:16px;
+
+    outline:none;
+
+}
+
+
+textarea{
+
+    min-height:140px;
+
+    resize:none;
+
+}
+
+
+#sendMessage{
+
+    width:100%;
+
+    border:none;
+
+    border-radius:40px;
+
+    padding:16px;
+
+    background:#b88a2c;
+
+    color:#fff;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+}
+
+
+/*==================================
+        Responsive
+==================================*/
+
+
+@media(max-width:480px){
+
+
+.card,
+.invite-card{
+
+    max-width:95%;
+
+    min-height:620px;
+
+    padding:35px 22px;
+
+}
+
+
+.main-names{
+
+    font-size:62px;
+
+}
+
+
+.couple-names{
+
+    font-size:66px;
+
+}
+
+
+.children-names{
+
+    font-size:48px;
+
+}
+
+
+.section-title{
+
+    font-size:30px;
+
+}
+
+
+.parents-box{
+
+    flex-direction:column;
+
+}
+
+
+.counter{
+
+    gap:6px;
+
+}
+
+
+.counter div{
+
+    width:62px;
+
+    height:62px;
+
+}
+
+
+.counter span{
+
+    font-size:20px;
+
+}
+
+
+.counter small{
+
+    font-size:11px;
+
+}
+
+
+.map-box{
+
+    height:220px;
+
+}
+
+}
+
+
+/*==================================
+        ظهور الكروت
+==================================*/
+
+
+.card{
+
+    opacity:0;
+
+    transform:translateY(50px);
+
+    transition:all .8s ease;
+
+}
+
+
+.card.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+.quran-ayah{
+
+    font-family:"Amiri";
+
+    font-size:24px;
+
+    line-height:2;
+
+    color:#8b5e34;
+
+    margin:25px auto;
+
+    max-width:330px;
+
+    text-align:center;
+
+    text-shadow:
+    0 2px 5px rgba(0,0,0,.08);
+
+}.parents {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: nowrap;
+}
+
+.parent-box {
+    text-align: center;
+    min-width: 200px;
+}
+
+@media (max-width: 600px){
+    .parents {
+        gap: 15px;
+    }
+
+    .parent-box {
+        min-width: 150px;
+    }
+}
