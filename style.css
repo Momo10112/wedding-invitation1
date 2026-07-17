@@ -1097,4 +1097,23 @@ textarea{
     font-family:"Aref Ruqaa" !important;
     color:#b88a2c;
 
+}@media(max-width:480px){
+
+.couple-names{
+
+    font-family:"Aref Ruqaa" !important;
+    font-size:66px !important;
+    color:#b88a2c;
+    line-height:1.2;
+
+}
+
+
+.couple-names span{
+
+    font-family:"Aref Ruqaa" !important;
+    font-size:42px !important;
+
+}
+
 }
