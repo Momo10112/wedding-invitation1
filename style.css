@@ -1188,10 +1188,14 @@ textarea{
     }
 
 }
-.invite-text{
-    font-size: 22px;      /* تكبير الخط */
-    margin-top: -15px;    /* رفعها لفوق */
-    margin-bottom: 20px;
-    color: #8b5e34;
+/* يتشرفان بدعوة سيادتكم */
+
+.invite-message{
     font-family: "Amiri";
+    font-size: 28px;
+    color: #8b5e34;
+    line-height: 1.9;
+
+    margin-top: -25px;   /* يرفع الجملة لفوق */
+    margin-bottom: 30px;
 }
