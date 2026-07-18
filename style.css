@@ -1123,3 +1123,28 @@ textarea{
     margin-top: -25px;   /* يرفع الجملة لفوق */
     margin-bottom: 30px;
 }
+/* رسائل الزوار */
+
+.message-box{
+    width:100%;
+    text-align:right;
+    background:rgba(255,255,255,.75);
+    padding:15px;
+    margin-bottom:15px;
+    border-radius:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+
+.message-box strong{
+    display:block;
+    text-align:right;
+    margin-bottom:8px;
+    color:#a6792d;
+    font-size:18px;
+}
+
+.message-box p{
+    text-align:right;
+    line-height:1.8;
+    color:#5d4630;
+}
