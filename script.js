@@ -59,13 +59,27 @@ openBtn.addEventListener("click", () => {
 
 function showCards() {
 
-    cards.forEach((card, index) => {
+    // إظهار أول كارت وتاني كارت مباشرة
+    if (cards[0]) cards[0].classList.add("show");
+    if (cards[1]) cards[1].classList.add("show");
 
-        setTimeout(() => {
-            card.classList.add("show");
-        }, index * 250); // ظهور الكروت بالتتابع
+    // باقي الكروت تظهر مع الاسكرول
+    const observer = new IntersectionObserver((entries) => {
 
-    });
+        entries.forEach((entry) => {
+
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            }
+
+        });
+
+    }, { threshold: 0.25 });
+
+    // نبدأ من الكارت الثالث
+    for (let i = 2; i < cards.length; i++) {
+        observer.observe(cards[i]);
+    }
 
 }
 
